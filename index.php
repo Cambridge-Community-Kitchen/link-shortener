@@ -1,18 +1,53 @@
 <?php
     // get request, e.g. "/allthedocs
     $request = $_SERVER['REQUEST_URI'];
-    error_log($request);
+    // error_log($request);
     $link_from_request = "";
 
-    $str = file_get_contents('links.json');
-    $links = json_decode($str, true);
+    $links_json = file_get_contents('links.json');
+    $links_obj = json_decode($links_json, true);
+    $all_links_flat = array_merge([], ...array_values($links_obj));
 
-    $matching_link = $links[$link_from_request];
+    $matching_link = null;
 
-    if ($matching_link) {
-        // redirect to matching_link
+    if ($request != "/") {
+        $matching_link = array_find($all_links_flat, function(array $link_ref) use($request) {
+            return "/" . $link_ref["shorturl"] == $request;
+        });
+    
+        if (gettype($matching_link) != "NULL") {
+            $actual_link = $matching_link["link"];
+            header("Location: $actual_link");
+            die();
+        }
     }
 
+    function slugify($text, string $divider = '-')
+    {
+      // replace non letter or digits by divider
+      $text = preg_replace('~[^\pL\d]+~u', $divider, $text);
+
+      // transliterate
+      $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+      // remove unwanted characters
+      $text = preg_replace('~[^-\w]+~', '', $text);
+
+      // trim
+      $text = trim($text, $divider);
+
+      // remove duplicate divider
+      $text = preg_replace('~-+~', $divider, $text);
+
+      // lowercase
+      $text = strtolower($text);
+
+      if (empty($text)) {
+        return 'n-a';
+      }
+
+      return $text;
+    }
 ?>
 
 
@@ -33,20 +68,22 @@
     <h1>CCK Links directory</h1>
 
     <?php 
-        if (!$matching_link) {
-            echo "<div>Your link $matching_link</div>";
+        if ($matching_link == null && $request != "/") {
+            echo "<div>\"$request\" doesn't match any known links, search the directory below for the desired shortened url</div>";
         }
-    ?>
+    ?> 
 
-    <h2>Cleaning</h2>
-    <div class="cleaning section">
-    </div>
 
-    <h2>Signal Chats</h2>
-    <div class="signal section">
-        <div>/cleaning <span class="text">Cleaning</span></div>
-        /transportrequests 
-    </div>
+    <?php foreach($links_obj as $section=>$section_link_objs): ?>
+        <h2><?= $section ?></h2>
+        <div class="section <?= slugify($section) ?>">
+            <?php foreach($section_link_objs as $key=>$link_obj): ?>
+                <?php if(($link_obj["hide_from_index_page"] ?? false) != true): ?>
+                    <div><a class="shorturl" href="<?=$link_obj["link"]?>">/<?= $link_obj["shorturl"] ?></a> <span><?= $link_obj["name"]?></span></div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
 </body>
 
 </html>

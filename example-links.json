@@ -1,0 +1,77 @@
+{
+    "Rotas": [
+        {
+            "name": "Delivery Riders rota",
+            "shorturl": "rota-delivery-riders",
+            "link": "https://docs.google.com/spreadsheets/d/12erSFilMLTo1cfYoGhX6u70KlLcriS46jb3VoVjTlmw/edit?gid=0#gid=0"
+        }
+    ],
+    "Cleaning": [
+        {
+            "name": "Surfaces/Floors/Washing up Guides Nov 2025",
+            "link": "https://docs.google.com/document/d/1qqP5l8zvJTCtX6AqGqryqNeYbp6Va5E3m-yai9iVI6E/edit?tab=t.0#heading=h.fvwahxax0nqp",
+            "shorturl": "surfaces-floors-washing-guide"
+        }
+    ],
+    "Cooking": [
+        {
+            "name": "Dish of the Day webpage",
+            "shorturl": "dotd",
+            "link": "https://dotd.cckitchen.uk"
+        }
+    ],
+    "Delivery": [
+        {
+            "name": "Delivery intro video",
+            "shorturl": "delivery-intro-video",
+            "link": "https://www.youtube.com/watch?v=NvwY8OR0RPA"
+        }
+    ],
+    "Delivery Coord": [
+        {
+            "name": "Delivery co-ordinator handbook",
+            "shorturl": "delivery-coord-handbook",
+            "link": "https://docs.google.com/document/d/17PsKPtsrdgJtnNQSEVDyupacVhBTRUIbx2zseAUkBSc/edit?tab=t.0#heading=h.o3opqnyk9ghs"
+        },
+        {
+            "name": "Delivery co-ordinator intro video",
+            "shorturl": "delivery-coord-intro-video",
+            "link": "https://www.youtube.com/watch?v=sdCcu46hgSA"
+        }
+    ],
+    "Signal Chats": [
+        {
+            "name": "Kitchen Co-ordination",
+            "shorturl": "signal-kitchen",
+            "link": "https://signal.group/#CjQKINTrsmC16UNUhyS9fueX5i_v6w4wZ1G8QWW1eouSaRv0EhDLJLPrs_WxnTn0lzGW9bv6"
+        }
+    ],
+    "Admin/general": [
+        {
+            "name": "'What is CCK?' – how to talk about what we do",
+            "shorturl": "what-is-cck",
+            "link": "https://docs.google.com/document/d/1ALC8_BDbMKjlmUPb_GKTXldCo_cdIeF_cWx82shC3hE/edit?tab=t.0#heading=h.7fqpoppyjjdx"
+        }
+    ],
+    "Volunteers": [
+        {
+            "name": "Recruitment Toolkit",
+            "shorturl": "recruitment-toolkit",
+            "link": "https://drive.google.com/drive/folders/1S4s4-L1GHhgCyaIfLCVlatKmZjR_r-ZL?usp=sharing"
+        }
+    ],
+    "Coders": [
+        {
+            "name": "Code architecture",
+            "shorturl": "code-architecture",
+            "link": "https://calendar.google.com/calendar/u/0/embed?src=cambscommunitykitchen@gmail.com&ctz=Europe/London"
+        }
+    ],
+    "Misc.": [
+        {
+            "name": "All the docs (old document archive)",
+            "shorturl": "allthedocs",
+            "link": "https://docs.google.com/spreadsheets/d/1kI4iqnerwzaule_PPHUVsCpZ8hsx2V4gjR9tYdN15s4"
+        }
+    ]
+}
