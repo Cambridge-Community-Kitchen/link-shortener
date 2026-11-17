@@ -1,0 +1,25 @@
+{
+    "Admin/general": {
+
+    },
+    "Cleaning": {
+
+    },
+    "Cooking": {
+        "dotd": "https://dotd.cckitchen.uk",
+        "dishofthedayform": "https://docs.google.com/forms/d/e/1FAIpQLSc0u7Z91HrNR7oVqJYQWlMDe7jgCbZ22PkZ6OMG3HGbCkD0Iw/viewform"
+    },
+    "Signal Chats": {
+        "cleaning": "",
+    },
+    "Delivery": {
+
+    },
+    "Delivery Coord": {
+
+    },
+    "Misc.": {
+        "allthedocs": "https://docs.google.com/spreadsheets/d/1kI4iqnerwzaule_PPHUVsCpZ8hsx2V4gjR9tYdN15s4"
+    
+    }
+}

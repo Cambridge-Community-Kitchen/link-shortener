@@ -1,0 +1,58 @@
+body {
+    font-family: 'Lexend', Arial, sans-serif;
+    margin: 20px;
+    background: #a6fa8e22;
+}
+h1,h2,h3,h4 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.signal {
+    --base: #8ea7c8;
+}
+.section {
+    padding: 1rem;
+}
+
+.section.signal {
+    color: var(--base);
+    border: 3px solid transparent;
+    
+    background-color: var(--base);
+
+    border-color: var(--base);
+    /* background-color: rgb(from var(--base) h s calc(l + 5%)); */
+}
+/* section.text {
+    color: var(--base);
+} */
+
+[data-day="Mon"] {
+
+    background-color: #f09ea7;
+}
+
+[data-day="Tue"] {
+    background-color: #f6ca94;
+}
+
+[data-day="Wed"] {
+    background-color: #fafabe;
+}
+
+[data-day="Thu"] {
+    background-color: #c1ebc0;
+}
+
+[data-day="Fri"] {
+    background-color: #c7caff;
+}
+
+[data-day="Sat"] {
+    background-color: #cdabeb;
+}
+
+[data-day="Sun"] {
+    background-color: #f6c2f3;
+}
