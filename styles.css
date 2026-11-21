@@ -18,8 +18,14 @@ h1,h2,h3,h4 {
 .section.admin-general {
     background-color: #fdf284;
 }
+.section.admin-recruitment {
+    background-color: #f2ee8e;
+}
 .section.rotas {
     background-color: #dfa16c;
+}
+.section.recipients {
+    background-color: #ffa488;
 }
 .section.cleaning {
     background-color: #8ea7c8;
@@ -33,22 +39,57 @@ h1,h2,h3,h4 {
 .section.delivery-coord {
     background-color: #dd7e92;
 }
-.section.volunteers {
-    background-color: #64649e;
-    color: #dfdfd6;
-}
 .section.hosts {
     background-color: #7bc9d3;
-}
-.section.coders {
-    background-color: #2d2d2d;
-    color: #dfdfd6;
 }
 .section.signal {
     background-color: #8ea7c8;
 }
 
-.shorturl {
+.section.volunteers {
+    background-color: #64649e;
+    /* color: #dfdfd6; */
+}
+.section.coders {
+    background-color: #2d2d2d;
+    /* color: #dfdfd6; */
+}
+
+.section:is(.coders,.volunteers) {
+    color: #cecec3;
+}
+
+
+.row {
+    margin-bottom: 1rem;
+}
+.row a {
+    color: #393939;
+
     min-width: 150px;
     display: inline-block;
+    font-size: 1.5rem;
+}
+.row a:is(:hover,:active) {
+    color: #686868;
+}
+.section:is(.coders,.volunteers) a {
+    color: #f1f1ed;
+}
+.section:is(.coders,.volunteers) a:is(:hover,:active) {
+    color: #d2d2cd;
+}
+.row p {
+    margin: 0;
+}
+.shorturl {
+    font-size: 12px;
+}
+.copy-icon {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.copy-icon svg {
+    margin-bottom: -4px;
+    height: 14px;
 }
