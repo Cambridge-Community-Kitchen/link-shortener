@@ -1,11 +1,10 @@
-This is a very basic link shortener. It's deployed at the subdomain
-link.cckitchen.uk
+This lives at link.cckitchen.uk
 
-.htaccess config redirects all traffic to /index.php
-
-If it matches a hardcoded url, it redirects to it. Otherwise it falls back to a
-menu page of all links (a la CCKallthedocs)
-
-All links are found at links.json - stored on server, not on git (to keep a few
-semi-private links that way). Either copy example-links.json to links.json to
-develop locally, or grab the real one from the deployed site.
+1. link.cckitchen.uk displays a read-only version of the "allthedocs"
+   spreadsheet (specifically, a locked, public, read-only copy of the sheet)
+2. when someone loads the page, if the local server "links.csv" is more than an
+   hour old, it grabs that sheet, and stores it as an updated csv (there's also
+   a backup of yesterdays csv in backup_from_yesterday/links.csv in case
+   something goes wrong)
+3. valid short-urls will redirect the user immediately to that resource. E.g.
+   link.cckitchen.uk/donate redirects to the opencollective page.
