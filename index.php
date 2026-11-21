@@ -87,13 +87,32 @@
 
     <?php 
         if (!$shorturl_is_valid && $request != "/") {
-            echo "<div>\"$request\" doesn't match any known links, search the directory below for the desired \"short url\", e.g. \"link.cckitchen.uk/eating-with-cck\"</div>";
+            echo "<div class=\"invalid-shorturl\">\"$request\" doesn't match any known links, search the directory below for the desired \"short url\", e.g. \"link.cckitchen.uk/eating-with-cck\"</div>";
         }
-    ?> 
+    ?>
 
+    <div class="jump-to">
+        Jump to section:
+        <ul>
+            <?php foreach($categories as $category): ?>
+                <li><button class="jump-to-button <?= slugify($category) ?>"><a href="#<?= slugify($category) ?>"><?= $category ?></a></button></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+
+    <div class="short-url-helptext">
+        <p>
+            How to copy a url:
+        </p>
+        <p style="font-size: 0.8rem;padding-left: 1rem;">
+            Just click "Copy ⧉".
+            <br/>
+            This will copy, for example, the url "link.cckitchen.uk/eating-with-cck" for the document named "Eating with CCK"
+        </p>
+    </div>
 
     <?php foreach($categories as $category): ?>
-        <h2><?= $category ?></h2>
+        <h2 id="<?= slugify($category) ?>"><?= $category ?></h2>
         <div class="section <?= slugify($category) ?>">
             <?php foreach($grouped[$category] as $row): ?>
                 <?php if($row["Hidden from link.cckitchen.uk?"] == "" && $row["Active?"] != "No"): ?>

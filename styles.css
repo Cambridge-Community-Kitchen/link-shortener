@@ -7,55 +7,108 @@ h1,h2,h3,h4 {
     margin: 0;
     margin-bottom: 0.5rem;
 }
+p {
+    margin: 0.2rem 0
+}
+
+
+.invalid-shorturl {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+
+.jump-to {
+    margin-bottom: 2rem;
+}
+.jump-to ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 800px;
+    padding-left: 0;
+}
+li {
+    list-style: none;
+}
+.jump-to-button {
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.jump-to-button:hover {
+    filter: brightness(1.2);
+}
+.jump-to-button a {
+    text-decoration: none;
+    border: none;
+    color: inherit;
+}
+
+
+.short-url-helptext {
+    margin-bottom: 2rem;
+}
+
+
 
 .section {
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     
     background: silver;
     color: #1c1b1a;
 }
-.section.admin-general {
+.admin-general {
     background-color: #fdf284;
 }
-.section.admin-recruitment {
+.admin-recruitment {
     background-color: #f2ee8e;
 }
-.section.rotas {
+.rotas {
     background-color: #dfa16c;
 }
-.section.recipients {
+.recipients {
     background-color: #ffa488;
 }
-.section.cleaning {
+.cleaning {
     background-color: #8ea7c8;
 }
-.section.cooking {
+.cooking {
     background-color: #b0d492;
 }
-.section.delivery {
+.cooking-tl {
+    background-color: #64bda7;
+}
+.delivery {
     background-color: #feb2b8;
 }
-.section.delivery-coord {
+.delivery-co-ord {
     background-color: #dd7e92;
 }
-.section.hosts {
+.hosts {
     background-color: #7bc9d3;
 }
-.section.signal {
+.signal {
     background-color: #8ea7c8;
 }
+.eat-in-tuesdays {
+    background-color: #98d5e8;
+}
 
-.section.volunteers {
+.volunteers {
     background-color: #64649e;
-    /* color: #dfdfd6; */
 }
-.section.coders {
+.coding {
     background-color: #2d2d2d;
-    /* color: #dfdfd6; */
+}
+.stock-organisation {
+    background-color: #83827b;
 }
 
-.section:is(.coders,.volunteers) {
+:is(.coding,.volunteers) {
     color: #cecec3;
 }
 
@@ -73,10 +126,10 @@ h1,h2,h3,h4 {
 .row a:is(:hover,:active) {
     color: #686868;
 }
-.section:is(.coders,.volunteers) a {
+.section:is(.coding,.volunteers) a {
     color: #f1f1ed;
 }
-.section:is(.coders,.volunteers) a:is(:hover,:active) {
+.section:is(.coding,.volunteers) a:is(:hover,:active) {
     color: #d2d2cd;
 }
 .row p {
