@@ -53,12 +53,16 @@
 
     // get request, e.g. "/allthedocs
     $request = $_SERVER['REQUEST_URI'];
-    $request_shorturl = substr($request, 1); // converts "/dotd" to "dotd"
-    $shorturl_is_valid = array_key_exists($request_shorturl, $shorturl_to_fullurl);
-    if ($shorturl_is_valid) {
-        $full_url = $shorturl_to_fullurl[$request_shorturl];
-        header("Location: $full_url");
-        die();
+    $shorturl_is_valid = false;
+    if ($request != "/") {
+        $request_shorturl = substr($request, 1); // converts "/dotd" to "dotd"
+        $shorturl_is_valid = array_key_exists($request_shorturl, $shorturl_to_fullurl);
+        echo $shorturl_is_valid;
+        if ($shorturl_is_valid) {
+            $full_url = $shorturl_to_fullurl[$request_shorturl];
+            header("Location: $full_url");
+            die();
+        }
     }
 
     // no redirect; now we build read-only index page
