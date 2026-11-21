@@ -84,6 +84,7 @@
 
 <body>
     <h1>CCK Links directory</h1>
+    <a href="www.cckitchen.uk" class="link-home">Go to CCK homepage</a>
 
     <?php 
         if (!$shorturl_is_valid && $request != "/") {
