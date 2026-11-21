@@ -1,3 +1,5 @@
+# link shortener
+
 This lives at link.cckitchen.uk
 
 1. link.cckitchen.uk displays a read-only version of the "allthedocs"
@@ -8,3 +10,8 @@ This lives at link.cckitchen.uk
    something goes wrong)
 3. valid short-urls will redirect the user immediately to that resource. E.g.
    link.cckitchen.uk/donate redirects to the opencollective page.
+
+## local dev
+
+you can either copy "example-links.csv" to "links.csv", or, running the
+application will create one for you
